@@ -86,9 +86,9 @@ const Home = () => {
 
                 {/* Become a Co-Tasker Button */}
                 <li className="nav-item">
-                  <a className="btn btn-success ms-3" href="#">
+                  <Link className="btn btn-success ms-3" to="/tasker">
                     Become a Co-Tasker
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

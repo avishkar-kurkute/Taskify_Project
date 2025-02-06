@@ -1,0 +1,166 @@
+/* Full-page container */
+.tasker-signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("../assets/images/TaskerBack.jpg") no-repeat center center/cover; /* Background Image */
+  position: relative;
+}
+
+/* Background overlay for better readability */
+.tasker-signup-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dark Overlay */
+  z-index: 1;
+}
+
+/* Left Side: Image */
+.tasker-image {
+  width: 50%;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+
+.tasker-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Side: Signup Box */
+.tasker-signup-box {
+  width: 50%;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.5); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.taskify-logo {
+  width: 120px;
+}
+
+/* Title */
+.tasker-signup-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.signup-subtext {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input Groups */
+.input-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.input-group label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+  display: block;
+}
+
+.input-group select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+/* Earnings Display */
+.earnings {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.earnings span {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Submit Button */
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: #007bff;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+  background: #0056b3;
+}
+
+/* Sign In Link */
+.signin-text {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.signin-text a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signin-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tasker-signup-container {
+    flex-direction: column;
+  }
+
+  .tasker-image {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .tasker-signup-box {
+    width: 100%;
+    padding: 30px;
+  }
+}

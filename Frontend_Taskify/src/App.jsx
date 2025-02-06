@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import SignUpForm from "./components/SignUpForm";
+import TaskerSignUp from "./components/TaskerSignUp";
 //<Route path="/login" element={<Login />} /> {/* Login route */}
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
           }
         />{" "}
         <Route path="/login/Signup" element={<SignUpForm />} />
-        {/* Login route with background */}
+        <Route path="/tasker" element={<TaskerSignUp />} />
       </Routes>
     </Router>
   );
