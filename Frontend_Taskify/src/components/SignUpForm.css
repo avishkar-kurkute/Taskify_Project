@@ -1,0 +1,128 @@
+/* Centering the form container */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  padding: 20px;
+}
+
+/* Form Box */
+.signup-box {
+  background: #fff;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  overflow-y: auto;
+  max-height: 90vh; /* To prevent overflow from breaking the layout */
+  padding-bottom: 2rem;
+}
+
+/* Heading */
+.signup-heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input Groups */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #6a11cb;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(106, 17, 203, 0.5);
+}
+
+input:disabled {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #6a11cb;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background: #4a0f9f;
+}
+
+/* Spacing for mobile responsiveness */
+@media (max-width: 768px) {
+  .signup-box {
+    padding: 1.5rem;
+  }
+}
+
+/* Placeholder Text Styling */
+input::placeholder {
+  color: #bbb;
+}
+
+/* Fix for form scroll when content overflows */
+.signup-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.signup-box::-webkit-scrollbar-thumb {
+  background-color: #6a11cb;
+  border-radius: 4px;
+}
+
+/* Additional Styling */
+.address-section {
+  margin-top: 1.5rem;
+}
+
+/* Links */
+.signup-link {
+  font-size: 1rem;
+  color: #6a11cb;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+  color: #4a0f9f;
+}

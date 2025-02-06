@@ -2,6 +2,11 @@ import React from "react";
 import Footer from "./Footer";
 import "./Home.css"; // Import the CSS file
 import Card from "./Card";
+
+//Importing the link
+
+import { Link } from "react-router-dom";
+
 //Importing the images
 import petCareImage from "../assets/images/petCare.webp";
 import furnitureImage from "../assets/images/furniture.png";
@@ -74,9 +79,9 @@ const Home = () => {
 
                 {/* Signup/Login */}
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link" to="/login">
                     Signup/Login
-                  </a>
+                  </Link>
                 </li>
 
                 {/* Become a Co-Tasker Button */}
