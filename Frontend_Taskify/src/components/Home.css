@@ -1,0 +1,113 @@
+
+/* Flexbox for full-page layout */
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar Adjustments */
+.navbar {
+    background-color: #f8f9fa;
+    padding: 12px 20px;
+}
+
+/* Make Taskify Name Bigger and Attractive */
+.navbar .navbar-brand {
+    font-size: 2.5rem; /* Increase the font size */
+    font-weight: bold; /* Make it bold */
+    color: #007bff; /* Change the color to blue (can customize further) */
+    text-transform: uppercase; /* Optional: To make the text all caps */
+    letter-spacing: 2px; /* Optional: Add some spacing between letters */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.navbar .navbar-brand:hover {
+    color: #0056b3; /* Change the color when hovering */
+}
+
+/* Rest of the Navbar Styles */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Add proper spacing between elements */
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+
+/* Button Styling */
+.btn-success {
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+/* Ensure the Main Content Fills Remaining Space */
+.main-content {
+    width: 100vw;
+    height: 90vh; /* Fill Remaining Height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.navbar .dropdown-menu {
+    min-width: 200px;
+}
+
+/* Hero Section*/
+
+/* Hero Section Styling */
+.hero {
+    background-image: url('D:\Lets see\Taskify_Project\Frontend_Taskify\src\assets\images\Hero-image.png'); /* Path to your image in the assets folder */
+    background-size: cover;
+    background-position: center;
+    height: 50vh; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+  
+
+/* Footer */
+.footer {
+    border-top: 1px solid #dee2e6;
+    padding: 20px 0;
+    color: #6c757d;
+    width: 100%;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+/* Navbar Adjustments */
+.navbar {
+    background-color: #f8f9fa;
+    padding: 12px 20px;
+}
+
+/* card container*/
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+      
+
