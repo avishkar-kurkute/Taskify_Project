@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "./TaskerSignUp.css"; // Updated CSS
-import logo from "../assets/images/favicon-taskify.png"; // Your Taskify logo
-import taskerImage from "../assets/images/tasker-image.jpg"; // Sample tasker image
+import "./TaskerSignUp.css";
+import logo from "../assets/images/favicon-taskify.png"; // Taskify logo
 
 const TaskerSignUp = () => {
   const [taskerData, setTaskerData] = useState({
@@ -29,41 +28,56 @@ const TaskerSignUp = () => {
 
   return (
     <div className="tasker-signup-container">
-      {/* Left Section: Image */}
-      <div className="tasker-image">
-        <img src={taskerImage} alt="Tasker" />
-      </div>
-
-      {/* Right Section: Form */}
       <div className="tasker-signup-box">
-        {/* Logo at the top */}
+        {/* Logo */}
         <div className="logo-container">
           <img src={logo} alt="Taskify Logo" className="taskify-logo" />
         </div>
 
-        <h2 className="tasker-signup-title">Earn money your way</h2>
+        <h2 className="tasker-signup-title">Join as a Tasker</h2>
         <p className="signup-subtext">
-          See how much you can make tasking on Taskify
+          Start earning by offering your services!
         </p>
 
         <form onSubmit={handleSubmit} className="tasker-signup-form">
           <div className="input-group">
-            <label>Select your area</label>
-            <select
-              name="area"
-              value={taskerData.area}
+            <label>Full Name</label>
+            <input
+              type="text"
+              name="fullName"
+              value={taskerData.fullName}
               onChange={handleChange}
               required
-            >
-              <option value="">Select your area</option>
-              <option value="Mumbai">Mumbai</option>
-              <option value="Pune">Pune</option>
-              <option value="Delhi">Delhi</option>
-            </select>
+              placeholder="Enter your full name"
+            />
           </div>
 
           <div className="input-group">
-            <label>Choose a category</label>
+            <label>Email Address</label>
+            <input
+              type="email"
+              name="email"
+              value={taskerData.email}
+              onChange={handleChange}
+              required
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div className="input-group">
+            <label>Phone Number</label>
+            <input
+              type="tel"
+              name="phoneNumber"
+              value={taskerData.phoneNumber}
+              onChange={handleChange}
+              required
+              placeholder="Enter your phone number"
+            />
+          </div>
+
+          <div className="input-group">
+            <label>Category</label>
             <select
               name="category"
               value={taskerData.category}
@@ -77,19 +91,46 @@ const TaskerSignUp = () => {
             </select>
           </div>
 
-          {/* Earnings Display (Optional) */}
-          <h3 className="earnings">
-            $60 <span>per hour</span>
-          </h3>
+          <div className="input-group">
+            <label>Area</label>
+            <input
+              type="text"
+              name="area"
+              value={taskerData.area}
+              onChange={handleChange}
+              required
+              placeholder="Enter your service area"
+            />
+          </div>
+
+          <div className="input-group">
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              value={taskerData.password}
+              onChange={handleChange}
+              required
+              placeholder="Create a password"
+            />
+          </div>
+
+          <div className="input-group">
+            <label>Confirm Password</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              value={taskerData.confirmPassword}
+              onChange={handleChange}
+              required
+              placeholder="Re-enter password"
+            />
+          </div>
 
           <button type="submit" className="btn-submit">
-            Get Started
+            Sign Up as Tasker
           </button>
         </form>
-
-        <p className="signin-text">
-          Already have an account? <a href="#">Sign in</a>
-        </p>
       </div>
     </div>
   );
